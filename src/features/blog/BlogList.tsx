@@ -1,10 +1,22 @@
+import Link from 'next/link';
+import { useRecoilValue } from 'recoil';
+import { blogListState } from '../../states/blogListState';
+
 const BlogList = () => {
+  const blogList = useRecoilValue(blogListState);
+
   return (
-    <div>
-      <p>blog1</p>
-      <p>blog2</p>
-      <p>blog3</p>
-    </div>
+    <ul>
+      {blogList.map((blog) => {
+        return (
+          <li key={blog.id}>
+            <Link href={`/blog/${blog.id}`}>
+              <a>{blog.title}</a>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 

@@ -1,13 +1,20 @@
-import Link from 'next/link';
+import { useEffect } from 'react';
+import { useSetRecoilState } from 'recoil';
 import { client } from '../libs/client';
+import { blogListState } from '../states/blogListState';
 import Top from '../templates/Top';
 
 export default function Home({ blog }) {
-  console.log(blog);
+  const setBlogList = useSetRecoilState(blogListState);
+
+  // TODO: 修正
+  useEffect(() => {
+    setBlogList(blog);
+  }, [blog]);
+
   return <Top />;
 }
 
-// データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: 'blog' });
 
