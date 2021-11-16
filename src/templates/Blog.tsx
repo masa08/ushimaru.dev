@@ -1,10 +1,10 @@
-import Aside from '../common/aside';
-import Container from '../common/container';
-import Flex from '../common/flex';
-import Main from '../common/main';
-import BlogContent from '../features/blog/BlogContent';
-import BlogList from '../features/blog/BlogList';
-import Profile from '../features/user/Profile';
+import Aside from '../common/aside'
+import Container from '../common/container'
+import Flex from '../common/flex'
+import Main from '../common/main'
+import BlogContent from '../features/blog/BlogContent'
+import BlogList from '../features/blog/BlogList'
+import Profile from '../features/user/Profile'
 
 const Blog = () => {
   return (
@@ -19,7 +19,7 @@ const Blog = () => {
         </Aside>
       </Flex>
     </Container>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog

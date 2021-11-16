@@ -1,9 +1,9 @@
-import Aside from '../common/aside';
-import Container from '../common/container';
-import Flex from '../common/flex';
-import Main from '../common/main';
-import BlogList from '../features/blog/BlogList';
-import Profile from '../features/user/Profile';
+import Aside from '../common/aside'
+import Container from '../common/container'
+import Flex from '../common/flex'
+import Main from '../common/main'
+import BlogList from '../features/blog/BlogList'
+import Profile from '../features/user/Profile'
 
 const Top = () => {
   return (
@@ -18,7 +18,7 @@ const Top = () => {
         </Aside>
       </Flex>
     </Container>
-  );
-};
+  )
+}
 
-export default Top;
+export default Top

@@ -1,8 +1,8 @@
-import { useRecoilValue } from 'recoil';
-import { blogState } from '../../states/blogState';
+import { useRecoilValue } from 'recoil'
+import { blogState } from '../../states/blogState'
 
 const BlogContent = () => {
-  const blog = useRecoilValue(blogState);
+  const blog = useRecoilValue(blogState)
 
   return (
     <div>
@@ -14,7 +14,7 @@ const BlogContent = () => {
         }}
       />
     </div>
-  );
-};
+  )
+}
 
-export default BlogContent;
+export default BlogContent

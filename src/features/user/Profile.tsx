@@ -5,7 +5,7 @@ const Profile = () => {
       <p>career</p>
       <p>interest</p>
     </div>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import { useRecoilValue } from 'recoil';
-import { blogListState } from '../../states/blogListState';
+import Link from 'next/link'
+import { useRecoilValue } from 'recoil'
+import { blogListState } from '../../states/blogListState'
 
 const BlogList = () => {
-  const blogList = useRecoilValue(blogListState);
+  const blogList = useRecoilValue(blogListState)
 
   return (
     <ul>
@@ -14,10 +14,10 @@ const BlogList = () => {
               <a>{blog.title}</a>
             </Link>
           </li>
-        );
+        )
       })}
     </ul>
-  );
-};
+  )
+}
 
-export default BlogList;
+export default BlogList

@@ -1,5 +1,5 @@
 const Container = ({ children }) => {
-  return <div className="xl:container xl:mx-auto">{children}</div>;
-};
+  return <div className='xl:container xl:mx-auto'>{children}</div>
+}
 
-export default Container;
+export default Container
