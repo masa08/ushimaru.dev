@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { client } from '../../libs/client'
 import { blogState } from '../../states/blogState'
-import Blog from '../../templates/Blog'
+import Blog from '../../templates/blog'
 
 export default function BlogId({ blog }) {
   const setBlog = useSetRecoilState(blogState)

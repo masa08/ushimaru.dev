@@ -1,5 +1,5 @@
 const Main = ({ children }) => {
-  return <div className='w-2/3'>{children}</div>
+  return <main className='w-3/4 p-5'>{children}</main>
 }
 
 export default Main

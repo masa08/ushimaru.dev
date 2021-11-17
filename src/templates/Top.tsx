@@ -1,21 +1,22 @@
-import Aside from '../common/aside'
-import Container from '../common/container'
-import Flex from '../common/flex'
-import Main from '../common/main'
+import Aside from '../components/common/aside'
+import Container from '../components/common/container'
+import Flex from '../components/common/flex'
+import Main from '../components/common/main'
+import MainHeaderContainer from '../containers/mainHeader'
 import BlogList from '../features/blog/BlogList'
 import Profile from '../features/user/Profile'
 
 const Top = () => {
   return (
     <Container>
-      {/* TODO: main visual */}
       <Flex>
-        <Main>
-          <Profile />
-        </Main>
         <Aside>
-          <BlogList />
+          <Profile />
         </Aside>
+        <Main>
+          <MainHeaderContainer />
+          <BlogList />
+        </Main>
       </Flex>
     </Container>
   )
