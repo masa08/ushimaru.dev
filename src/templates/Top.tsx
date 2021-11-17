@@ -6,7 +6,7 @@ import MainHeaderContainer from '../containers/mainHeader'
 import BlogList from '../features/blog/BlogList'
 import Profile from '../features/user/Profile'
 
-const Top = () => {
+const TopTemplate = () => {
   return (
     <Container>
       <Flex>
@@ -22,4 +22,4 @@ const Top = () => {
   )
 }
 
-export default Top
+export default TopTemplate

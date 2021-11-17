@@ -3,10 +3,9 @@ import Container from '../components/common/container'
 import Flex from '../components/common/flex'
 import Main from '../components/common/main'
 import MainHeaderContainer from '../containers/mainHeader'
-import BlogContent from '../features/blog/BlogContent'
 import Profile from '../features/user/Profile'
 
-const BlogTemplate = () => {
+const AboutTemplate = () => {
   return (
     <Container>
       <Flex>
@@ -15,11 +14,11 @@ const BlogTemplate = () => {
         </Aside>
         <Main>
           <MainHeaderContainer />
-          <BlogContent />
+          <p>AboutTemplate</p>
         </Main>
       </Flex>
     </Container>
   )
 }
 
-export default BlogTemplate
+export default AboutTemplate

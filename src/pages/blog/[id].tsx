@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { client } from '../../libs/client'
 import { blogState } from '../../states/blogState'
-import Blog from '../../templates/blog'
+import BlogTemplate from '../../templates/blog'
 
 export default function BlogId({ blog }) {
   const setBlog = useSetRecoilState(blogState)
@@ -12,7 +12,7 @@ export default function BlogId({ blog }) {
     setBlog(blog)
   }, [blog])
 
-  return <Blog />
+  return <BlogTemplate />
 }
 
 export const getStaticPaths = async () => {
