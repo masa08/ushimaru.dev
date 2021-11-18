@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BLOG_URL, TOP_URL } from '../../utils/constants'
 
 export interface BlogBreadcrumbsProps {
   id: string
@@ -10,12 +11,12 @@ const BlogBreadcrumbs: React.FC<BlogBreadcrumbsProps> = ({ id, title }) => {
     <div className='text-sm breadcrumbs'>
       <ul>
         <li>
-          <Link href={`/`}>
+          <Link href={TOP_URL}>
             <a>HOME</a>
           </Link>
         </li>
         <li>
-          <Link href={`/blog/${id}`}>
+          <Link href={`${BLOG_URL}/${id}`}>
             <a>{title}</a>
           </Link>
         </li>

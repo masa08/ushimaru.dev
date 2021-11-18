@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ABOUT_URL } from '../../utils/constants'
 
 const Profile = () => {
   return (
@@ -25,7 +26,7 @@ const Profile = () => {
             <p className='border-t my-3'></p>
           </li>
           <li>
-            <Link href={`/about`}>
+            <Link href={ABOUT_URL}>
               <a>About</a>
             </Link>
           </li>

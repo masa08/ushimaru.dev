@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import dayjs from 'dayjs'
 import { useRecoilValue } from 'recoil'
 import { blogListState } from '../../states/blogListState'
+import { BLOG_URL } from '../../utils/constants'
 
 const BlogList = () => {
   const blogList = useRecoilValue(blogListState)
@@ -8,17 +10,19 @@ const BlogList = () => {
   return (
     <ul>
       {blogList.map((blog) => {
+        const createdAt = dayjs(new Date(blog.createdAt)).format('YYYY.MM.DD')
+
         return (
-          <li key={blog.id} className='mb-5 py-2 border-b'>
+          <li key={blog.id} className='mb-5 pb-2 border-b'>
             <div>
-              <Link href={`/blog/${blog.id}`}>
+              <Link href={`${BLOG_URL}/${blog.id}`}>
                 <a href=''>
                   <h2 className='text-xl mb-1'>{blog.title}</h2>
                 </a>
               </Link>
-              <div>{blog.description}</div>
+              <div className='mb-1'>{blog.description}</div>
               <div className='flex'>
-                <p>{blog.createdAt}</p>
+                <p>{createdAt}</p>
               </div>
             </div>
           </li>
