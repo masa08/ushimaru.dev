@@ -13,7 +13,7 @@ export default function BlogId({ blog }) {
   return (
     <RecoilRoot initializeState={initializeState(blog)}>
       {/* <BlogTemplate /> */}
-      <p>test</p>
+      <p>blog test</p>
     </RecoilRoot>
   )
 }
