@@ -1,18 +1,20 @@
-import { useEffect } from 'react'
-import { useSetRecoilState } from 'recoil'
+import { RecoilRoot } from 'recoil'
 import { client } from '../libs/client'
 import { blogListState } from '../states/blogListState'
 import TopTemplate from '../templates/top'
 
-export default function Home({ blog }) {
-  const setBlogList = useSetRecoilState(blogListState)
+const initializeState =
+  (blogList) =>
+  ({ set }) => {
+    set(blogListState, blogList)
+  }
 
-  // TODO: 修正
-  useEffect(() => {
-    setBlogList(blog)
-  }, [blog])
-
-  return <TopTemplate />
+export default function Home({ blogList }) {
+  return (
+    <RecoilRoot initializeState={initializeState(blogList)}>
+      <TopTemplate />
+    </RecoilRoot>
+  )
 }
 
 export const getStaticProps = async () => {
@@ -20,7 +22,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      blog: data.contents,
+      blogList: data.contents,
     },
   }
 }

@@ -1,18 +1,20 @@
-import { useEffect } from 'react'
-import { useSetRecoilState } from 'recoil'
+import { RecoilRoot } from 'recoil'
 import { client } from '../../libs/client'
 import { blogState } from '../../states/blogState'
 import BlogTemplate from '../../templates/blog'
 
+const initializeState =
+  (blog) =>
+  ({ set }) => {
+    set(blogState, blog)
+  }
+
 export default function BlogId({ blog }) {
-  const setBlog = useSetRecoilState(blogState)
-
-  // TODO: 修正
-  useEffect(() => {
-    setBlog(blog)
-  }, [blog])
-
-  return <BlogTemplate />
+  return (
+    <RecoilRoot initializeState={initializeState(blog)}>
+      <BlogTemplate />
+    </RecoilRoot>
+  )
 }
 
 export const getStaticPaths = async () => {
