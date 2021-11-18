@@ -8,6 +8,7 @@ const dummyBlog = {
   publishedAt: '',
   revisedAt: '',
   title: '',
+  description: '',
   body: '',
 }
 

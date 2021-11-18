@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { client } from '../libs/client'
 import { blogListState } from '../states/blogListState'
-import Top from '../templates/top'
+import TopTemplate from '../templates/top'
 
 export default function Home({ blog }) {
   const setBlogList = useSetRecoilState(blogListState)
@@ -12,7 +12,7 @@ export default function Home({ blog }) {
     setBlogList(blog)
   }, [blog])
 
-  return <Top />
+  return <TopTemplate />
 }
 
 export const getStaticProps = async () => {

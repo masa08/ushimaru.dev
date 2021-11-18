@@ -2,8 +2,9 @@ import Aside from '../components/common/aside'
 import Container from '../components/common/container'
 import Flex from '../components/common/flex'
 import Main from '../components/common/main'
-import MainHeaderContainer from '../containers/mainHeader'
-import Profile from '../features/user/Profile'
+import AboutContent from '../components/organisms/aboutContent'
+import AboutBreadCrumbsContainer from '../containers/molecules/aboutBreadCrumbs'
+import Profile from '../features/user/profile'
 
 const AboutTemplate = () => {
   return (
@@ -13,8 +14,8 @@ const AboutTemplate = () => {
           <Profile />
         </Aside>
         <Main>
-          <MainHeaderContainer />
-          <p>AboutTemplate</p>
+          <AboutBreadCrumbsContainer />
+          <AboutContent />
         </Main>
       </Flex>
     </Container>

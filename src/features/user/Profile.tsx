@@ -4,7 +4,7 @@ const Profile = () => {
   return (
     <div id='profile' className='justify-center'>
       <div className='avatar w-full'>
-        <div className='mb-4 w-24 h-24 mask mask-decagon'>
+        <div className='mb-4 w-9/12 h-9/12 mask mask-decagon mx-auto'>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src='https://avatars.githubusercontent.com/u/19849423?v=4' alt='profileImage' />
         </div>

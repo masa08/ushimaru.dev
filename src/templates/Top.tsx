@@ -2,9 +2,9 @@ import Aside from '../components/common/aside'
 import Container from '../components/common/container'
 import Flex from '../components/common/flex'
 import Main from '../components/common/main'
-import MainHeaderContainer from '../containers/mainHeader'
-import BlogList from '../features/blog/BlogList'
-import Profile from '../features/user/Profile'
+import TopBreadCrumbsContainer from '../containers/molecules/topBreadCrumbs'
+import BlogList from '../features/blog/blogList'
+import Profile from '../features/user/profile'
 
 const TopTemplate = () => {
   return (
@@ -14,7 +14,7 @@ const TopTemplate = () => {
           <Profile />
         </Aside>
         <Main>
-          <MainHeaderContainer />
+          <TopBreadCrumbsContainer />
           <BlogList />
         </Main>
       </Flex>

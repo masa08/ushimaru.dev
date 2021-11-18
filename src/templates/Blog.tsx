@@ -2,9 +2,9 @@ import Aside from '../components/common/aside'
 import Container from '../components/common/container'
 import Flex from '../components/common/flex'
 import Main from '../components/common/main'
-import MainHeaderContainer from '../containers/mainHeader'
-import BlogContent from '../features/blog/BlogContent'
-import Profile from '../features/user/Profile'
+import BlogBreadCrumbsContainer from '../containers/molecules/blogBreadCrumbs'
+import BlogContent from '../features/blog/blogContent'
+import Profile from '../features/user/profile'
 
 const BlogTemplate = () => {
   return (
@@ -14,7 +14,7 @@ const BlogTemplate = () => {
           <Profile />
         </Aside>
         <Main>
-          <MainHeaderContainer />
+          <BlogBreadCrumbsContainer />
           <BlogContent />
         </Main>
       </Flex>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 //   title: string
 // }
 
-const MainHeader: React.FC = () => {
+const AboutBreadcrumbs: React.FC = () => {
   return (
     <div className='text-sm breadcrumbs'>
       <ul>
@@ -14,11 +14,13 @@ const MainHeader: React.FC = () => {
           </Link>
         </li>
         <li>
-          <a>Documents</a>
+          <Link href={`/about`}>
+            <a>ABOUT</a>
+          </Link>
         </li>
       </ul>
     </div>
   )
 }
 
-export default MainHeader
+export default AboutBreadcrumbs
