@@ -1,7 +1,7 @@
 import { RecoilRoot } from 'recoil'
 import { client } from '../libs/client'
 import { blogListState } from '../states/blogListState'
-// import TopTemplate from '../templates/top'
+import TopTemplate from '../templates/top'
 
 const initializeState =
   (blogList) =>
@@ -12,8 +12,7 @@ const initializeState =
 export default function Home({ blogList }) {
   return (
     <RecoilRoot initializeState={initializeState(blogList)}>
-      <p>top test</p>
-      {/* <TopTemplate /> */}
+      <TopTemplate />
     </RecoilRoot>
   )
 }
