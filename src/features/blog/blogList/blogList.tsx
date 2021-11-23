@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import dayjs from 'dayjs'
-import { useRecoilValue } from 'recoil'
-import { blogListState } from '../../states/blogListState'
-import { BLOG_URL } from '../../utils/constants'
+import { BLOG_URL } from '../../../utils/constants'
+import { Blog } from '../../../types/blog'
 
-const BlogList = () => {
-  const blogList = useRecoilValue(blogListState)
+interface BlogList {
+  blogList: Blog[]
+}
 
+const BlogList: React.FC<BlogList> = ({ blogList }) => {
   return (
     <ul>
       {blogList.map((blog) => {

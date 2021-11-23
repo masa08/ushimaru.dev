@@ -1,11 +1,14 @@
 import dayjs from 'dayjs'
 import { useRecoilValue } from 'recoil'
-import { blogState } from '../../states/blogState'
+import { blogState } from '../../../states/blogState'
+import { Blog } from '../../../types/blog'
 
-const BlogContent = () => {
-  const blog = useRecoilValue(blogState)
-  const createdAt = dayjs(new Date(blog.createdAt)).format('YYYY.MM.DD')
+interface BlogContentProps {
+  blog: Blog
+  createdAt: string
+}
 
+const BlogContent: React.FC<BlogContentProps> = ({ blog, createdAt }) => {
   return (
     <div>
       <h1 className='text-xl mb-1'>{blog.title}</h1>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ABOUT_URL } from '../../utils/constants'
+import { ABOUT_URL } from '../../../utils/constants'
 
 const Profile = () => {
   return (

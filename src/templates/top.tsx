@@ -3,8 +3,8 @@ import Container from '../components/common/container'
 import Flex from '../components/common/flex'
 import Main from '../components/common/main'
 import TopBreadCrumbsContainer from '../containers/molecules/topBreadCrumbs'
-import BlogList from '../features/blog/blogList'
-import Profile from '../features/user/profile'
+import BlogListContainer from '../features/blog/blogList/blogListContainer'
+import Profile from '../features/user/profile/profile'
 
 const TopTemplate = () => {
   return (
@@ -15,7 +15,7 @@ const TopTemplate = () => {
         </Aside>
         <Main>
           <TopBreadCrumbsContainer />
-          <BlogList />
+          <BlogListContainer />
         </Main>
       </Flex>
     </Container>

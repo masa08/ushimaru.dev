@@ -3,8 +3,8 @@ import Container from '../components/common/container'
 import Flex from '../components/common/flex'
 import Main from '../components/common/main'
 import BlogBreadCrumbsContainer from '../containers/molecules/blogBreadCrumbs'
-import BlogContent from '../features/blog/blogContent'
-import Profile from '../features/user/profile'
+import BlogContentContainer from '../features/blog/blogContent/blogContentContainer'
+import Profile from '../features/user/profile/profile'
 
 const BlogTemplate = () => {
   return (
@@ -15,7 +15,7 @@ const BlogTemplate = () => {
         </Aside>
         <Main>
           <BlogBreadCrumbsContainer />
-          <BlogContent />
+          <BlogContentContainer />
         </Main>
       </Flex>
     </Container>

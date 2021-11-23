@@ -4,7 +4,7 @@ import Flex from '../components/common/flex'
 import Main from '../components/common/main'
 import AboutContent from '../components/organisms/aboutContent'
 import AboutBreadCrumbsContainer from '../containers/molecules/aboutBreadCrumbs'
-import Profile from '../features/user/profile'
+import Profile from '../features/user/profile/profile'
 
 const AboutTemplate = () => {
   return (
